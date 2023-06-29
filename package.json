@@ -1,0 +1,45 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/react": "^7.0.24",
+    "@storybook/react-vite": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-plugin-storybook": "^0.6.12",
+    "lerna": "^7.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.24",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9"
+  },
+  "scripts": {
+    "start:package-ui": "lerna run --scope package-ui storybook --stream",
+    "build:package-ui": "lerna run --scope package-ui build --stream",
+    "test:package-ui": "lerna run --scope package test-ui --stream",
+    "start:package-app": "lerna run --scope package-app storybook --stream",
+    "dev:package-app": "lerna run --scope package-app dev --stream",
+    "build:package-app": "lerna run --scope package-app build --stream",
+    "test:package-app": "lerna run --scope package-app test --stream",
+    "dev:react-vite": "lerna run --scope react-vite dev --stream",
+    "dev:react-cra": "lerna run --scope react-cra start --stream",
+    "build": "lerna run build --stream",
+    "test": "NODE_ENV=test jest --coverage"
+  }
+}
